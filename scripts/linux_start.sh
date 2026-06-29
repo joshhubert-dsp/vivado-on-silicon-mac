@@ -11,6 +11,12 @@ validate_linux
 mkdir /home/user/.vnc &> /dev/null
 cat "$script_dir/vncpasswd" | vncpasswd -f > /home/user/.vnc/passwd
 
+# Stale LXDE IPC sockets can survive in the bind-mounted home directory and
+# make apps such as pcmanfm exit immediately with no visible error.
+rm -f /home/user/.cache/pcmanfm-socket-* \
+      /home/user/.cache/menu-cached-* \
+      /home/user/.cache/.lxterminal-socket-*
+
 vncserver -DisconnectClients -NeverShared -nocursor -geometry $(tr -d "\n\r\t " < "$script_dir/vnc_resolution") -SecurityTypes VncAuth -PasswordFile /home/user/.vnc/passwd -localhost no -verbose -fg -RawKeyboard -RemapKeys "0xffe9->0xff7e,0xffe7->0xff7e" -- LXDE
 # explanation (see also TigerVNC manual):
 #

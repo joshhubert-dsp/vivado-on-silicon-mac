@@ -13,8 +13,13 @@ installer/
 .dbus/
 .vnc/
 .xsession-errors
-scripts/install_bin
-hash
+
+# user persistent Vivado projects directory
 projects/*
 !projects/README.md
+
+# random other artifacts
+scripts/install_bin
+hash
 .sudo_as_admin_successful
+.bash_history
