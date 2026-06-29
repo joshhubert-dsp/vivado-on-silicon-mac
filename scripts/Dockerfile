@@ -57,3 +57,6 @@ ENV LC_ALL=en_US.UTF-8
 
 # Without this, Vivado will crash when synthesizing
 ENV LD_PRELOAD="/lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libselinux.so.1 /lib/x86_64-linux-gnu/libz.so.1 /lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0"
+
+# PDF viewer for extra QOL
+RUN apt-get install -y evince

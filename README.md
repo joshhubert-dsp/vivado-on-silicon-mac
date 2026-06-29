@@ -2,7 +2,7 @@
 
 NOTE: This fork is edited specifically to support Artix-7 on Vivado 2024.2, for my FPGA Design class at UCSC Extension.
 It assumes use of the self-extracting web installer, with installer hash updated for June 2026. 
-The Xilinx installer requires you to have ~100GB available on your machine, but it won't actually use that much.
+The Xilinx installer requires you to have ~100GB available on your machine, but this config only uses 50GB (yay).
 
 This is a tool for installing [Vivado™](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools.html) on Arm®-based Apple Silicon Macs in a Rosetta-enabled virtual machine. It is in no way associated with Xilinx or AMD.
 
